@@ -1,15 +1,104 @@
 <html>
     <head>
-        <title></title>
+        <title>The Dynamic Interactive Game</title>
 
     </head>
     <body>
-        <p></p>
-        <p></p>
+        <h1>The Gem Score Factor</h1>
+        <p>Each of the four gems has their own individual value. Use the four gems to match the target score.</p>
+        <br>
+        <p>Number to Reach exactly: <span id="#exactnumber"></span></p>
+
+        <div id= "gems"></div>
         
-        <style>
-        
-        
-        </style>
+        <script type= "text/javascript">
+            $(document).ready(function(){
+                // the varible for the target value on the game
+                var target = 58;
+                $('#exactnumber').text(target);
+                //the actual factor to store the score for every 
+                var counter = 0;
+
+                var numberOptions = [10, 5, 3, 1];
+                //the variable for the picture
+                var gemImage1 = ("<img>");
+
+                gemImage1.addClass("gem-image");
+
+                gemImage1.attr("src","content/images/gem1");
+                
+                gemImage1.attr("data-gemvalue", numberOptions[i]);
+
+                $("#gems").append(gemImage1);
+
+                var gemImage2 = ("<img>");
+
+                gemImage2.addClass("gem-image");
+
+                gemImage2.attr("src","content/images/gem2");
+
+                gemImage2.attr("data-gemvalue", numberOptions[i]);
+
+                $("#gems").append(gemImage2);
+                
+                var gemImage3 = ("<img>");
+
+                gemImage3.addClass("gem-image");
+
+                gemImage3.attr("src","content/images/gem3");
+
+                gemImage3.attr("data-gemvalue", numberOptions[i]);
+
+                $("#gems").append(gemImage3);
+                
+                var gemImage4 = ("<img>");
+
+                gemImage4.addClass("gem-image");
+
+                gemImage4.attr("src","content/images/gem4");
+
+                gemImage4.attr("data-gemvalue", numberOptions[i]);
+
+                $("#gems").append(gemImage4);
+                })
+
+
+
+
+
+                $(".gem-image").on("click", function () {
+                    var gemValue = ($(this).attr("data-gemvalue"))
+                    gemValue = parseint(gemValue);
+
+                    counter += gemValue;
+
+                    if (counter === target) {
+                        alert("You Win!")
+                    }
+
+                    else if (counter >= target) {
+                        alert("You Lose!")
+                    }
+
+
+                })
+                // The number selected random for the 4 gems in the game
+            var randomNumberbetween1and15 = Math.floor(Math.random() * 10);
+
+
+
+
+                function randomWholeNum() {
+
+
+                return Math.random();    
+                }
+                
+
+            
+            //the factor for the program to stay with the set number every new session.
+            
+        for (var i = 0; var < )
+        </script>
     </body>
 </html>
