@@ -4,6 +4,11 @@ p{
 }
 
 background {
-    src: 
+    background: url(content/images/mine-entrance.jpg);
 
+}
+
+h1{
+    font-size: 24px;
+    font-style: bold;
 }

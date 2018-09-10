@@ -1,104 +1,41 @@
 <html>
     <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>The Dynamic Interactive Game</title>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link type="text/css" href="content/css/reset.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="content/css/style.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="content/javascript/game.js"></script>
+        <h1>The Gem Score Factor</h1>        
     </head>
     <body>
-        <h1>The Gem Score Factor</h1>
-        <p>Each of the four gems has their own individual value. Use the four gems to match the target score.</p>
+        
+
+        <h2>
+            These four gems have their own indivdual values to hold.
+            <br>
+            Reach the target goal by using the gem's value. If the score is over the value, you lose the game. 
+        </h2>
         <br>
         <p>Number to Reach exactly: <span id="#exactnumber"></span></p>
 
-        <div id= "gems"></div>
+        <div id= "Target"></div>
+        <div id= "SuccessFailure">
+            <p>Success count: <span id="Success"></span></p>
+            <p>Failure count: <span id="Failure"></span></p>
+        </div>
+        <div id= "gems">
+            <img src="content/images/gem1.jpg" class="gems" id="Gem1" value="0">
+            <img src="content/images/gem2.jpg" class="gems" id="Gem2" value="0">
+            <img src="content/images/gem3.jpg" class="gems" id="Gem3" value="0">
+            <img src="content/images/gem4.jpg" class="gems" id="Gem4" value="0">
+        </div>
         
-        <script type= "text/javascript">
-            $(document).ready(function(){
-                // the varible for the target value on the game
-                var target = 58;
-                $('#exactnumber').text(target);
-                //the actual factor to store the score for every 
-                var counter = 0;
+        <div id="score">
 
-                var numberOptions = [10, 5, 3, 1];
-                //the variable for the picture
-                var gemImage1 = ("<img>");
-
-                gemImage1.addClass("gem-image");
-
-                gemImage1.attr("src","content/images/gem1");
-                
-                gemImage1.attr("data-gemvalue", numberOptions[i]);
-
-                $("#gems").append(gemImage1);
-
-                var gemImage2 = ("<img>");
-
-                gemImage2.addClass("gem-image");
-
-                gemImage2.attr("src","content/images/gem2");
-
-                gemImage2.attr("data-gemvalue", numberOptions[i]);
-
-                $("#gems").append(gemImage2);
-                
-                var gemImage3 = ("<img>");
-
-                gemImage3.addClass("gem-image");
-
-                gemImage3.attr("src","content/images/gem3");
-
-                gemImage3.attr("data-gemvalue", numberOptions[i]);
-
-                $("#gems").append(gemImage3);
-                
-                var gemImage4 = ("<img>");
-
-                gemImage4.addClass("gem-image");
-
-                gemImage4.attr("src","content/images/gem4");
-
-                gemImage4.attr("data-gemvalue", numberOptions[i]);
-
-                $("#gems").append(gemImage4);
-                })
-
-
-
-
-
-                $(".gem-image").on("click", function () {
-                    var gemValue = ($(this).attr("data-gemvalue"))
-                    gemValue = parseint(gemValue);
-
-                    counter += gemValue;
-
-                    if (counter === target) {
-                        alert("You Win!")
-                    }
-
-                    else if (counter >= target) {
-                        alert("You Lose!")
-                    }
-
-
-                })
-                // The number selected random for the 4 gems in the game
-            var randomNumberbetween1and15 = Math.floor(Math.random() * 10);
-
-
-
-
-                function randomWholeNum() {
-
-
-                return Math.random();    
-                }
-                
-
-            
-            //the factor for the program to stay with the set number every new session.
-            
-        for (var i = 0; var < )
-        </script>
+        </div>
+        
     </body>
 </html>
