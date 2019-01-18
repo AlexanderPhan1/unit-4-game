@@ -1,41 +1,70 @@
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>The Dynamic Interactive Game</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link type="text/css" href="content/css/reset.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="content/css/style.css">
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="content/javascript/game.js"></script>
-        <h1>The Gem Score Factor</h1>        
-    </head>
-    <body>
-        
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <h2>
-            These four gems have their own indivdual values to hold.
-            <br>
-            Reach the target goal by using the gem's value. If the score is over the value, you lose the game. 
-        </h2>
-        <br>
-        <p>Number to Reach exactly: <span id="#exactnumber"></span></p>
+    <title>Crystal Score Gamble</title>
 
-        <div id= "Target"></div>
-        <div id= "SuccessFailure">
-            <p>Success count: <span id="Success"></span></p>
-            <p>Failure count: <span id="Failure"></span></p>
-        </div>
-        <div id= "gems">
-            <img src="content/images/gem1.jpg" class="gems" id="Gem1" value="0">
-            <img src="content/images/gem2.jpg" class="gems" id="Gem2" value="0">
-            <img src="content/images/gem3.jpg" class="gems" id="Gem3" value="0">
-            <img src="content/images/gem4.jpg" class="gems" id="Gem4" value="0">
-        </div>
-        
-        <div id="score">
+    <!--Link to Reset CSS-->
+    <link href="content/css/reset.css" type="text/css" rel="stylesheet">
+    <!--Link to CSS Stylesheet-->
+    <link href="content/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+    <h1>Crystal Collector</h1>
+</div>
+<div id="instructions">
+    <p>You will be given a random number at the start of the game; this is your Target Number.</p>
+    <p>There are four crystals below; clicking on one of them will add a certain amount to your Score Total.</p>
+    <p>The objective of the game is to match your own Score to the random Target number. Match the number and you win.
+        Exceed the target's amount and you will lose the game.</p>
+    <p>The value of each crystal is hidden from you until you click on it, and with each new game the value of the
+        crystals changes.</p>
+</div>
 
-        </div>
-        
-    </body>
+<div class="column1">
+    <div class="targetlegend">
+        <p class="target">Target Number:</p>
+    </div>
+    <div class="targetscoreboard">
+        <h1 id="target-score">0</h1>
+    </div>
+</div>
+<div class="scoreboard">
+    <p id="wins">Wins: 0</p>
+    <p id="losses">Losses: 0</p>
+    <p id="result"></p>
+</div>
+<div class="column3">
+    <div class="playerlegend">
+        <p class="player">Your Total Score is:</p>
+    </div>
+    <div class="playerscoreboard">
+        <h1 id="player-score">0</h1>
+    </div>
+</div>
+
+<ul>
+    <l1>
+        <button id="gem1"><img src="content/images/gem1.jpg" height="100px" width="100px"></button>
+    </l1>
+    <li>
+        <button id="gem2"><img src="content/images/gem2.jpg" height="100px" width="100px"></button>
+    </li>
+    <li>
+        <button id="gem3"><img src="content/images/gem3.jpg" height="100px" width="100px"></button>
+    </li>
+    <li>
+        <button id="gem4"><img src="content/images/gem4.jpg" height="100px" width="100px"></button>
+    </li>
+</ul>
+
+
+<!--Link to jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--Link to Javascript-->
+<script src="content/javascript/game.js"></script>
+</body>
 </html>

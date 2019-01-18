@@ -1,14 +1,130 @@
-p{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: inherit;
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: url("../images/thinking.jpg") repeat;
+    width: 960px;
+    margin: 0 auto;
 }
 
-background {
-    background: url(content/images/mine-entrance.jpg);
-
+h1 {
+    font-size: 2.5em;
+    font-weight: 800;
 }
 
-h1{
-    font-size: 24px;
-    font-style: bold;
+p {
+    font-size: 1em;
+    font-weight: 300;
+    padding: 5px 0;
+}
+
+#header {
+    background-color: orange;
+    color: white;
+    width: 960px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+#instructions {
+    border-radius: 0.3em;
+    border: 1px solid aquamarine;
+    background-color: #0971b2;
+    color: aquamarine;
+    width: 750px;
+    text-align: left;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.column1, .scoreboard, .column3 {
+    float: left
+}
+
+p.target {
+    font-weight: 600;
+}
+
+.targetlegend {
+    border-radius: 0.5em;
+    background-color: #FF0000;
+    color: #222222;
+    width: 300px;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 30px;
+}
+
+.targetscoreboard {
+    border-radius: 0.5em;
+    background-color: #FF0000;
+    color: #222222;
+    width: 300px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p#wins, p#losses {
+    font-weight: 600;
+    font-size: 1.25em;
+}
+
+p#result {
+    color: #FF5E00;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.scoreboard {
+    border-radius: 1.0em;
+    background-color: darkcyan;
+    color: #00FFFF;
+    text-align: center;
+    vertical-align: middle;
+    width: 250px;
+    height: 150px;
+    line-height: 40px;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+p.player {
+    font-weight: 600;
+}
+
+.playerlegend {
+    border-radius: 0.5em;
+    background-color: #00ff48;
+    color: #004012;
+    width: 300px;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 30px;
+}
+
+.playerscoreboard {
+    border-radius: 0.5em;
+    background-color: #00ff48;
+    color: #004012;
+    width: 300px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.boardrow {
+    margin-bottom: 20px;
+}
+
+ul {
+    margin: 10px auto;
+    text-align: center;
+    clear: left;
+}
+
+li {
+    display: inline;
+    padding: 5px;
 }
